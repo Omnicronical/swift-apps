@@ -10,4 +10,9 @@ import Foundation
 
 class Tamagotchi {
     
+    func attributes() -> [Double] {
+        return []
+    }
+
+
 }

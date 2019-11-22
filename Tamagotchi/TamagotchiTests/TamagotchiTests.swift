@@ -15,7 +15,19 @@ class TamagotchiTests: XCTestCase {
         
         //act
         let tamagotchi = Tamagotchi()
+        
         //assert
         XCTAssertNotNil(tamagotchi)
+    }
+    
+    func testTamagotchiSetsAttributes() {
+        //arrange
+        
+        //act
+        let tamagotchi = Tamagotchi()
+        let actual = tamagotchi.attributes()
+        let expected : [Double] = []
+        //assert
+        XCTAssertEqual(actual, expected)
     }
 }
