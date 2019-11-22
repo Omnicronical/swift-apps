@@ -14,7 +14,7 @@ class TamagotchiTests: XCTestCase {
         //arrange
         
         //act
-        let tamagotchi = Tamxsagotchi()
+        let tamagotchi = Tamagotchi()
         //assert
         XCTAssertNotNil(tamagotchi)
     }
