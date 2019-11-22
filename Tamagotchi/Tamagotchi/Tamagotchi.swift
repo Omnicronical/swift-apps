@@ -10,8 +10,17 @@ import Foundation
 
 class Tamagotchi {
     
-    func attributes() -> [Double] {
-        return []
+    func firstAttributes() -> [Double] {
+        //var attributes : [Double] = []
+        var age = 0.0
+        var health = 100.0
+        var discipline = 50.0
+        var numberOfPoos = 0.0
+        var weight = 25.0
+        var hunger = 5.0
+        var attributes = [age, health, discipline, numberOfPoos, weight, hunger]
+        return attributes
+        
     }
 
 
