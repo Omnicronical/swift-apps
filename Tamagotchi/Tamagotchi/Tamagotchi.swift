@@ -23,5 +23,8 @@ class Tamagotchi {
         
     }
 
-
+    func ageUp(age: Double) -> Double{
+        let ageIncreased = age+1.0
+        return ageIncreased
+    }
 }
