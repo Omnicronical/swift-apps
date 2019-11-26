@@ -9,22 +9,55 @@
 import Foundation
 
 class Tamagotchi {
-    
-    func firstAttributes() -> [Double] {
-        //var attributes : [Double] = []
-        var age = 0.0
-        var health = 100.0
-        var discipline = 50.0
-        var numberOfPoos = 0.0
-        var weight = 25.0
-        var hunger = 5.0
-        var attributes = [age, health, discipline, numberOfPoos, weight, hunger]
-        return attributes
-        
-    }
+    var age = 0
+    var health = 100
+    var discipline = 50
+    var numberOfPoos = 0
+    var weight = 25
+    var hunger = 5
+    var death = false
 
-    func ageUp(age: Double) -> Double{
-        let ageIncreased = age+1.0
-        return ageIncreased
+    
+    func ageUp() {
+        age = age+1
+    }
+    
+    func healthDown() {
+        health = health-1
+    }
+    
+    func eatSnack() {
+        hunger = hunger-2
+        weight = weight+5
+    }
+    
+    func eatMeal() {
+        hunger = hunger-4
+        weight = weight+10
+    }
+    
+    func disciplineUp() {
+        discipline = discipline+10
+    }
+    
+    func flush() {
+        numberOfPoos = 0
+    }
+    
+    func poo() {
+        numberOfPoos = numberOfPoos+1
+
+    }
+    
+    func deathByOverweight() {
+        death = true
+    }
+    
+    func deathByAge() {
+        death = true
+    }
+    
+    func deathByHealth() {
+        death = true
     }
 }
