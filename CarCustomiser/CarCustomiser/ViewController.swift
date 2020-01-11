@@ -214,12 +214,12 @@ class ViewController: UIViewController {
     @IBAction func rocketBoosterToggle(  sender: Any) {
         
         if rocketBooster.isOn {
-            car?.topSpeed += 20
+            car?.topSpeed += 40
             car?.acceleration -= 3.0
             funds -= rocketCost
             
         } else {
-            car?.topSpeed -= 20
+            car?.topSpeed -= 40
             car?.acceleration += 3.0
             funds += rocketCost
         }
