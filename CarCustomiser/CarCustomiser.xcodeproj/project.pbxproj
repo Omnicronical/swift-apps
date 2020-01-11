@@ -16,6 +16,7 @@
 		64351EC523C934DD00A7ED70 /* CarCustomiserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64351EC423C934DD00A7ED70 /* CarCustomiserTests.swift */; };
 		64351ED023C934DD00A7ED70 /* CarCustomiserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64351ECF23C934DD00A7ED70 /* CarCustomiserUITests.swift */; };
 		64351EDE23C934FF00A7ED70 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64351EDD23C934FF00A7ED70 /* Car.swift */; };
+		64C2045523CA36F200D431F3 /* StarterCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C2045423CA36F200D431F3 /* StarterCars.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		64351ECF23C934DD00A7ED70 /* CarCustomiserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCustomiserUITests.swift; sourceTree = "<group>"; };
 		64351ED123C934DD00A7ED70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64351EDD23C934FF00A7ED70 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		64C2045423CA36F200D431F3 /* StarterCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterCars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				64351EB823C934DD00A7ED70 /* LaunchScreen.storyboard */,
 				64351EBB23C934DD00A7ED70 /* Info.plist */,
 				64351EDD23C934FF00A7ED70 /* Car.swift */,
+				64C2045423CA36F200D431F3 /* StarterCars.swift */,
 			);
 			path = CarCustomiser;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				64351EB223C934DB00A7ED70 /* ViewController.swift in Sources */,
 				64351EAE23C934DB00A7ED70 /* AppDelegate.swift in Sources */,
 				64351EDE23C934FF00A7ED70 /* Car.swift in Sources */,
+				64C2045523CA36F200D431F3 /* StarterCars.swift in Sources */,
 				64351EB023C934DB00A7ED70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
