@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet var enhancedEngine: UISwitch!
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var raceSuspension: UISwitch!
     @IBOutlet var rocketBooster: UISwitch!
    
+    @IBOutlet var carImageDisplay: UIImageView!
     @IBOutlet var fundsDisplay: UILabel!
     @IBOutlet var carStatistics: UILabel!
     
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
     var suspensionCost = 400
     var rocketCost = 1000
         
-    
+    var imageNames = ["Mazda MK-5", "Porsche 911", "Dodge Charger", "Shelby gt 500"]
     var starterCars = StarterCars()
     var carCounter = 0
     var car: Car? {
@@ -47,9 +49,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         car = starterCars.cars[carCounter]
+        carImageDisplay.image = UIImage(named: "Mazda MK-5")
         fundsDisplay.text = "Remaining Funds: \(funds)"
     }
+
+
    
     
     @IBAction func nextCar(  sender: Any) {
@@ -58,6 +64,7 @@ class ViewController: UIViewController {
             carCounter = 0
         }
         car = starterCars.cars[carCounter]
+        carImageDisplay.image = UIImage(named: imageNames[carCounter])
         
     }
 
