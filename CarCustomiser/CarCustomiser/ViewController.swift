@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet var nitroBoost: UISwitch!
     @IBOutlet var raceSuspension: UISwitch!
     @IBOutlet var rocketBooster: UISwitch!
+    
    
     @IBOutlet var carImageDisplay: UIImageView!
     @IBOutlet var fundsDisplay: UILabel!
