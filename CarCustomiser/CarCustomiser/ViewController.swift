@@ -45,7 +45,49 @@ class ViewController: UIViewController {
         }
     }
     
+    // Enablers
     
+    func enhancedEngineEnabler() {
+        if (funds - engineCost) < 0 && (enhancedEngine.isOn == false) {
+            enhancedEngine.isEnabled = false
+        } else {
+            enhancedEngine.isEnabled = true
+        }
+    }
+    
+    func extraGripTiresEnabler(){
+        if (funds - tiresCost) < 0 && (extraGripTires.isOn == false){
+            extraGripTires.isEnabled = false
+        } else {
+            extraGripTires.isEnabled = true
+        }
+    }
+    
+    func nitroBoostEnabler(){
+        if (funds - nitroCost) < 0 && (nitroBoost.isOn == false) {
+            nitroBoost.isEnabled = false
+        } else {
+            nitroBoost.isEnabled = true
+        }
+    }
+    
+    func raceSuspensionEnabler(){
+        if (funds - suspensionCost) < 0 && (raceSuspension.isOn == false) {
+            raceSuspension.isEnabled = false
+        } else {
+            raceSuspension.isEnabled = true
+        }
+    }
+    
+    func rocketBoostEnabler(){
+        if (funds - rocketCost) < 0 && (rocketBooster.isOn == false) {
+            rocketBooster.isEnabled = false
+        } else {
+            rocketBooster.isEnabled = true
+        }
+    }
+    
+    //Initial Load
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +99,7 @@ class ViewController: UIViewController {
     }
 
 
-   
+   //Cycles through cars
     
     @IBAction func nextCar(  sender: Any) {
         carCounter += 1
@@ -71,190 +113,80 @@ class ViewController: UIViewController {
 
     // All of the Packages
     
-    
     @IBAction func enhancedEngineToggle(  sender: Any) {
         if enhancedEngine.isOn {
             car?.topSpeed += 5
             funds -= engineCost
-
         } else {
             car?.topSpeed -= 5
             funds += engineCost
         }
-        if (funds - tiresCost) < 0 && (extraGripTires.isOn == false){
-            extraGripTires.isEnabled = false
-        } else {
-            extraGripTires.isEnabled = true
-        }
-        
-        if (funds - nitroCost) < 0 && (nitroBoost.isOn == false) {
-            nitroBoost.isEnabled = false
-        } else {
-            nitroBoost.isEnabled = true
-        }
-        
-        if (funds - suspensionCost) < 0 && (raceSuspension.isOn == false) {
-            raceSuspension.isEnabled = false
-        } else {
-            raceSuspension.isEnabled = true
-        }
-        
-        if (funds - rocketCost) < 0 && (rocketBooster.isOn == false) {
-            rocketBooster.isEnabled = false
-        } else {
-            rocketBooster.isEnabled = true
-        }
+        extraGripTiresEnabler()
+        nitroBoostEnabler()
+        raceSuspensionEnabler()
+        rocketBoostEnabler()
     }
     
     @IBAction func extraGripTiresToggle(  sender: Any) {
-        
         if extraGripTires.isOn {
             car?.handling += 1
             car?.acceleration -= 1.0
             funds -= tiresCost
-            
         } else {
             car?.handling -= 1
             car?.acceleration += 1.0
             funds += tiresCost
         }
-        if (funds - engineCost) < 0 && (enhancedEngine.isOn == false) {
-            enhancedEngine.isEnabled = false
-        } else {
-            enhancedEngine.isEnabled = true
-        }
-        
-        if (funds - nitroCost) < 0 && (nitroBoost.isOn == false) {
-            nitroBoost.isEnabled = false
-        } else {
-            nitroBoost.isEnabled = true
-        }
-        
-        if (funds - suspensionCost) < 0 && (raceSuspension.isOn == false) {
-            raceSuspension.isEnabled = false
-        } else {
-            raceSuspension.isEnabled = true
-        }
-        
-        if (funds - rocketCost) < 0 && (rocketBooster.isOn == false) {
-            rocketBooster.isEnabled = false
-        } else {
-            rocketBooster.isEnabled = true
-        }
-        
-        
+        enhancedEngineEnabler()
+        nitroBoostEnabler()
+        raceSuspensionEnabler()
+        rocketBoostEnabler()
     }
     
     @IBAction func nitroBoostToggle(  sender: Any) {
-        
         if nitroBoost.isOn {
             car?.topSpeed += 10
             car?.acceleration -= 1.5
             funds -= nitroCost
-            
         } else {
             car?.topSpeed -= 10
             car?.acceleration += 1.5
             funds += nitroCost
         }
-        if (funds - engineCost) < 0 && (enhancedEngine.isOn == false) {
-            enhancedEngine.isEnabled = false
-        } else {
-            enhancedEngine.isEnabled = true
-        }
-        
-        if (funds - tiresCost) < 0 && (extraGripTires.isOn == false) {
-            extraGripTires.isEnabled = false
-        } else {
-            extraGripTires.isEnabled = true
-        }
-        
-        if (funds - suspensionCost) < 0 && (raceSuspension.isOn == false) {
-            raceSuspension.isEnabled = false
-        } else {
-            raceSuspension.isEnabled = true
-        }
-        
-        if (funds - rocketCost) < 0 && (rocketBooster.isOn == false) {
-            rocketBooster.isEnabled = false
-        } else {
-            rocketBooster.isEnabled = true
-        }
-        
+        enhancedEngineEnabler()
+        extraGripTiresEnabler()
+        raceSuspensionEnabler()
+        rocketBoostEnabler()
     }
     
     @IBAction func raceSuspensionToggle(  sender: Any) {
-        
         if raceSuspension.isOn {
             car?.handling += 3
             funds -= suspensionCost
-            
         } else {
             car?.handling -= 3
             funds += suspensionCost
         }
-        if (funds - engineCost) < 0 && (enhancedEngine.isOn == false) {
-            enhancedEngine.isEnabled = false
-        } else {
-            enhancedEngine.isEnabled = true
-        }
-        
-        if (funds - tiresCost) < 0 && (extraGripTires.isOn == false) {
-            extraGripTires.isEnabled = false
-        } else {
-            extraGripTires.isEnabled = true
-        }
-        
-        if (funds - nitroCost) < 0 && (nitroBoost.isOn == false) {
-            nitroBoost.isEnabled = false
-        } else {
-            nitroBoost.isEnabled = true
-        }
-        
-        if (funds - rocketCost) < 0 && (rocketBooster.isOn == false) {
-            rocketBooster.isEnabled = false
-        } else {
-            rocketBooster.isEnabled = true
-        }
-        
+        enhancedEngineEnabler()
+        extraGripTiresEnabler()
+        nitroBoostEnabler()
+        rocketBoostEnabler()
     }
     
     @IBAction func rocketBoosterToggle(  sender: Any) {
-        
         if rocketBooster.isOn {
             car?.topSpeed += 40
             car?.acceleration -= 3.0
             funds -= rocketCost
-            
         } else {
             car?.topSpeed -= 40
             car?.acceleration += 3.0
             funds += rocketCost
         }
-        if (funds - engineCost) < 0 && (enhancedEngine.isOn == false) {
-            enhancedEngine.isEnabled = false
-        } else {
-            enhancedEngine.isEnabled = true
-        }
-        
-        if (funds - tiresCost) < 0 && (extraGripTires.isOn == false) {
-            extraGripTires.isEnabled = false
-        } else {
-            extraGripTires.isEnabled = true
-        }
-        
-        if (funds - nitroCost) < 0 && (nitroBoost.isOn == false) {
-            nitroBoost.isEnabled = false
-        } else {
-            nitroBoost.isEnabled = true
-        }
-        
-        if (funds - suspensionCost) < 0 && (raceSuspension.isOn == false) {
-            raceSuspension.isEnabled = false
-        } else {
-            raceSuspension.isEnabled = true
-        }
-        
+        enhancedEngineEnabler()
+        extraGripTiresEnabler()
+        nitroBoostEnabler()
+        raceSuspensionEnabler()
     }
     
     
