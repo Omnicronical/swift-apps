@@ -36,6 +36,7 @@ class Tamagotchi {
                 Health: \(health)
                 Hunger: \(hunger)
                 Discipline: \(discipline)
+                Weight: \(weight)
 
             """
     }
@@ -46,16 +47,25 @@ class Tamagotchi {
     
     func healthDown() {
         health = health-1
+        if health <= 0 {
+            deathByHealth()
+        }
     }
     
     func eatSnack() {
         hunger = hunger-2
         weight = weight+5
+        if weight > 100 {
+            deathByOverweight()
+        }
     }
     
     func eatMeal() {
         hunger = hunger-4
         weight = weight+10
+        if weight > 100 {
+            deathByOverweight()
+        }
     }
     
     func disciplineUp() {
