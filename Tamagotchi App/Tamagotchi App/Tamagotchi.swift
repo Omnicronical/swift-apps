@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Tamagotchi {
+class Tamagotchi {
     var name: String
     var age: Int
     var health: Int
@@ -18,6 +18,17 @@ struct Tamagotchi {
     var death: Bool
     var numberOfPoos: Int
     
+    init() {
+        name = "Tamagotchi"
+        age = 0
+        health = 5
+        hunger = 5
+        discipline = 5
+        weight = 10
+        death = false
+        numberOfPoos = 0
+        
+    }
     
     func displayStats() -> String {
         
@@ -28,5 +39,49 @@ struct Tamagotchi {
 
             """
     }
+    
+    func ageUp() {
+        age = age+1
+    }
+    
+    func healthDown() {
+        health = health-1
+    }
+    
+    func eatSnack() {
+        hunger = hunger-2
+        weight = weight+5
+    }
+    
+    func eatMeal() {
+        hunger = hunger-4
+        weight = weight+10
+    }
+    
+    func disciplineUp() {
+        discipline = discipline+10
+    }
+    
+    func flush() {
+        numberOfPoos = 0
+    }
+    
+    func poo() {
+        numberOfPoos = numberOfPoos+1
+
+    }
+    
+    func deathByOverweight() {
+        death = true
+    }
+    
+    func deathByAge() {
+        death = true
+    }
+    
+    func deathByHealth() {
+        death = true
+    }
+    
     
 }

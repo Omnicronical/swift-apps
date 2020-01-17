@@ -12,16 +12,19 @@ class ViewController: UIViewController {
     
     @IBOutlet var statistics: UILabel!
     
-    var tamagotchi: Tamagotchi?
+    var tamagotchi = Tamagotchi()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        statistics.text = tamagotchi?.displayStats()
-            
+        statistics.text = tamagotchi.displayStats()
         
     }
-
+   
+    func updateDisplay() {
+        statistics.text = tamagotchi.displayStats()
+    }
+    
 
 }
 

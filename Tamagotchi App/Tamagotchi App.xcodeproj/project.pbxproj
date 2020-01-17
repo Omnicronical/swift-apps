@@ -16,7 +16,6 @@
 		64005FFD23CDE98600BC0740 /* Tamagotchi_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64005FFC23CDE98600BC0740 /* Tamagotchi_AppTests.swift */; };
 		6400600823CDE98600BC0740 /* Tamagotchi_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6400600723CDE98600BC0740 /* Tamagotchi_AppUITests.swift */; };
 		6400601623CDE9C600BC0740 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6400601523CDE9C600BC0740 /* Tamagotchi.swift */; };
-		6400601823CDEC3900BC0740 /* StarterStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6400601723CDEC3900BC0740 /* StarterStatistics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		6400600723CDE98600BC0740 /* Tamagotchi_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi_AppUITests.swift; sourceTree = "<group>"; };
 		6400600923CDE98600BC0740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6400601523CDE9C600BC0740 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
-		6400601723CDEC3900BC0740 /* StarterStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterStatistics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 				64005FF023CDE98600BC0740 /* LaunchScreen.storyboard */,
 				64005FF323CDE98600BC0740 /* Info.plist */,
 				6400601523CDE9C600BC0740 /* Tamagotchi.swift */,
-				6400601723CDEC3900BC0740 /* StarterStatistics.swift */,
 			);
 			path = "Tamagotchi App";
 			sourceTree = "<group>";
@@ -267,7 +264,6 @@
 			files = (
 				64005FEA23CDE98500BC0740 /* ViewController.swift in Sources */,
 				64005FE623CDE98500BC0740 /* AppDelegate.swift in Sources */,
-				6400601823CDEC3900BC0740 /* StarterStatistics.swift in Sources */,
 				6400601623CDE9C600BC0740 /* Tamagotchi.swift in Sources */,
 				64005FE823CDE98500BC0740 /* SceneDelegate.swift in Sources */,
 			);
