@@ -16,7 +16,7 @@ class CarCustomiserTests: XCTestCase {
     let expected = """
         Make: Mazda
         Model: MK-5
-        Top Speed: 125
+        Speed: 125
         Acceleration (0-60 in): 7.7
         Handling: 5
 

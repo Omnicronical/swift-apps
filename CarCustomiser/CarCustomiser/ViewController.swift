@@ -19,8 +19,12 @@ class ViewController: UIViewController {
     
    
     @IBOutlet var carImageDisplay: UIImageView!
+    
+    @IBOutlet var nextCarButton: UIButton!
+    
     @IBOutlet var fundsDisplay: UILabel!
     @IBOutlet var carStatistics: UILabel!
+    @IBOutlet var timeDisplay: UILabel!
     
     var funds = 1_000 {
         didSet {
@@ -36,6 +40,7 @@ class ViewController: UIViewController {
     var suspensionCost = 400
     var rocketCost = 1000
         
+    var timeRemaining = 30
     var imageNames = ["Mazda MK-5", "Porsche 911", "Dodge Charger", "Shelby gt 500"]
     var starterCars = StarterCars()
     var carCounter = 0
@@ -44,6 +49,7 @@ class ViewController: UIViewController {
             carStatistics.text = car?.displayStats()
         }
     }
+    var timer: Timer?
     
     // Enablers
     
@@ -87,6 +93,34 @@ class ViewController: UIViewController {
         }
     }
     
+    //Finish
+    
+    func completedCar() {
+        enhancedEngine.isEnabled = false
+        extraGripTires.isEnabled = false
+        nitroBoost.isEnabled = false
+        raceSuspension.isEnabled = false
+        rocketBooster.isEnabled = false
+        nextCarButton.isEnabled = false
+        
+    }
+    
+    // Reset Display
+    
+    func resetDisplay() {
+        funds = 1000
+        enhancedEngine.setOn(false, animated: true)
+        enhancedEngine.isEnabled = true
+        extraGripTires.setOn(false, animated: true)
+        extraGripTires.isEnabled = true
+        nitroBoost.setOn(false, animated: true)
+        nitroBoost.isEnabled = true
+        raceSuspension.setOn(false, animated: true)
+        raceSuspension.isEnabled = true
+        rocketBooster.setOn(false, animated: true)
+        rocketBooster.isEnabled = true
+    }
+    
     //Initial Load
     
     override func viewDidLoad() {
@@ -96,6 +130,8 @@ class ViewController: UIViewController {
         car = starterCars.cars[carCounter]
         carImageDisplay.image = UIImage(named: "Mazda MK-5")
         fundsDisplay.text = "Remaining Funds: \(funds)"
+        timeDisplay.text = "Time: \(timeRemaining)"
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
     }
 
 
@@ -106,6 +142,7 @@ class ViewController: UIViewController {
         if carCounter >= starterCars.cars.count {
             carCounter = 0
         }
+        resetDisplay()
         car = starterCars.cars[carCounter]
         carImageDisplay.image = UIImage(named: imageNames[carCounter])
         
@@ -189,6 +226,15 @@ class ViewController: UIViewController {
         raceSuspensionEnabler()
     }
     
+    @objc func countdown() {
+        if timeRemaining > 0 {
+            timeRemaining -= 1
+            timeDisplay.text = "Time: \(timeRemaining)"
+        } else {
+            timer?.invalidate()
+            completedCar()
+        }
+    }
     
 }
 
