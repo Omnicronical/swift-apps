@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func ageing() {
-        ageTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(tamagotchi.ageUp), userInfo: nil, repeats: true)
+        print("no")
     }
     
     func timedChecker() {
