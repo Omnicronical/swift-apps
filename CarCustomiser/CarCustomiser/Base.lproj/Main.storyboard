@@ -330,8 +330,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3k8-eV-zMg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3k8-eV-zMg">
                                 <rect key="frame" x="24.666666666666657" y="144" width="365" height="66.666666666666686"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Car Customiser">
                                         <attributes>
@@ -345,15 +346,17 @@
                                 <color key="shadowColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8M-RF-0KB">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8M-RF-0KB">
                                 <rect key="frame" x="179" y="605.33333333333337" width="56" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="EXIT">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9k-ax-e2v">
-                                <rect key="frame" x="157.66666666666666" y="341.66666666666669" width="98.999999999999972" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9k-ax-e2v">
+                                <rect key="frame" x="157.66666666666666" y="342" width="98.999999999999972" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <state key="normal" title="PLAY">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -364,15 +367,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="C8M-RF-0KB" firstAttribute="centerX" secondItem="7lv-nM-R9Y" secondAttribute="centerX" id="65w-5w-vID"/>
-                            <constraint firstItem="C8M-RF-0KB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="t9k-ax-e2v" secondAttribute="bottom" constant="10" id="CNu-2g-q6K"/>
-                            <constraint firstItem="t9k-ax-e2v" firstAttribute="centerX" secondItem="7lv-nM-R9Y" secondAttribute="centerX" id="CuD-WT-Wrd"/>
-                            <constraint firstItem="3k8-eV-zMg" firstAttribute="centerX" secondItem="7lv-nM-R9Y" secondAttribute="centerX" id="ODC-D8-b9R"/>
-                            <constraint firstItem="Bsg-8l-2cD" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="C8M-RF-0KB" secondAttribute="bottom" constant="20" id="UA0-uN-lfU"/>
-                            <constraint firstItem="t9k-ax-e2v" firstAttribute="top" secondItem="3k8-eV-zMg" secondAttribute="bottom" constant="131.33000000000001" id="dDd-yo-4kN"/>
-                            <constraint firstItem="3k8-eV-zMg" firstAttribute="top" secondItem="Bsg-8l-2cD" secondAttribute="top" constant="100" id="zuc-bE-2aM"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bsg-8l-2cD"/>
                     </view>
                     <navigationItem key="navigationItem" id="1ai-51-lDa"/>
@@ -390,7 +384,7 @@
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="play.circle.fill" catalog="system" width="64" height="60"/>
         <image name="purple lambo" width="960" height="600"/>
-        <image name="square" catalog="system" width="32" height="32"/>
+        <image name="square" catalog="system" width="64" height="56"/>
         <image name="yellow lambo" width="341.33334350585938" height="192"/>
     </resources>
     <inferredMetricsTieBreakers>

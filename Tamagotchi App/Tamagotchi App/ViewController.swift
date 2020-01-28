@@ -17,14 +17,36 @@ class ViewController: UIViewController {
     
     
     var timer: Timer?
+    var ageTimer: Timer?
     var tamagotchi = Tamagotchi()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         statistics.text = tamagotchi.displayStats()
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(timedChecker), userInfo: nil, repeats: true)
+        timedChecker()
+        ageing()
         
+    }
+    
+ 
+    
+    func resetStats() {
+        tamagotchi = Tamagotchi()
+    }
+    
+    func ageing() {
+        ageTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(tamagotchi.ageUp), userInfo: nil, repeats: true)
+    }
+    
+    func timedChecker() {
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(death), userInfo: nil, repeats: true)
+        if tamagotchi.death == true {
+            timer?.invalidate()
+            resetStats()
+            updateDisplay()
+            timedChecker()
+        }
     }
    
     func updateDisplay() {
@@ -32,12 +54,47 @@ class ViewController: UIViewController {
     }
     
     @IBAction func feedMealButtonPush(_ sender: Any) {
-        tamagotchi.eatMeal()
-        updateDisplay()
+            tamagotchi.eatMeal()
+            if tamagotchi.satiated == true {
+                let alert = UIAlertController(title: "Not Hungry", message: "Let \(tamagotchi.name) digest!", preferredStyle: .alert)
+                           
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                           
+                self.present(alert, animated: true)
+            
+            }
+        
+            if tamagotchi.hunger <= 3 {
+                feedMeal.isEnabled = false
+            }
+            if tamagotchi.hunger <= 1 {
+                feedSnack.isEnabled = false
+            }
+        
+            updateDisplay()
+       
     }
     
     @IBAction func feedSnackButtonPush(_ sender: Any) {
+        
         tamagotchi.eatSnack()
+        if tamagotchi.satiated == true {
+            let alert = UIAlertController(title: "Not Hungry", message: "Let \(tamagotchi.name) digest!", preferredStyle: .alert)
+                       
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                       
+            self.present(alert, animated: true)
+            
+            
+        }
+        
+        if tamagotchi.hunger <= 3 {
+                       feedMeal.isEnabled = false
+        }
+        if tamagotchi.hunger <= 1 {
+            feedSnack.isEnabled = false
+        }
+        
         updateDisplay()
     }
     
@@ -50,6 +107,7 @@ class ViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             
             self.present(alert, animated: true)
+            tamagotchi.disciplineDown()
         }
         
         tamagotchi.disciplineUp()
@@ -57,7 +115,7 @@ class ViewController: UIViewController {
         
     }
     
-    @objc func timedChecker() {
+    @objc func death() {
         if tamagotchi.death == true {
             let alert = UIAlertController(title: "Tamagotchi has DIED", message: nil, preferredStyle: .alert)
             

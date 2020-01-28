@@ -18,8 +18,14 @@ class Tamagotchi {
     var death: Bool
     var numberOfPoos: Int
     
+    var satiated: Bool {
+        get {
+            return hunger <= 0
+        }
+    }
+    
     init() {
-        name = "Tamagotchi"
+        name = "Horatio"
         age = 0
         health = 5
         hunger = 5
@@ -33,6 +39,8 @@ class Tamagotchi {
     func displayStats() -> String {
         
         return """
+                Name: \(name)
+                Age: \(age)
                 Health: \(health)
                 Hunger: \(hunger)
                 Discipline: \(discipline)
@@ -41,7 +49,7 @@ class Tamagotchi {
             """
     }
     
-    func ageUp() {
+    @objc func ageUp() {
         age = age+1
     }
     
@@ -66,10 +74,15 @@ class Tamagotchi {
         if weight > 100 {
             deathByOverweight()
         }
+    
     }
     
     func disciplineUp() {
         discipline = discipline+10
+    }
+    
+    func disciplineDown() {
+        discipline = discipline - 10
     }
     
     func flush() {
