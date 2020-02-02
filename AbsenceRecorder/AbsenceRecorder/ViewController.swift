@@ -8,27 +8,75 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     var divisions: [Division] = []
+    var currentDate: Date = Date()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addData()
+        for division in divisions {
+            print("Name: \(division.name), Student No. \(division.students.count)")
+            for student in division.students {
+                print(" \(student.firstName)")
+            }
+        }
+        
+        updateDateDisplay()
         // iterate over ever division
         // for each division, outputs its name and the number of students in it to the console
         // for each division, ouptut each of its students name
     }
 
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return divisions.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Division", for: indexPath)
+        
+        cell.textLabel?.text = divisions[indexPath.row].name
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DivisionsAbsenceViewController") as? DivisionAbsenceViewController else {
+        fatalError("Failed to load Division Absence View Controller")
+        }
+        vc.division = divisions[indexPath.row]
+        
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func LastDay(_ sender: Any) {
+        currentDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate) ?? Date()
+        updateDateDisplay()
+    }
+    
+    @IBAction func NextDay(_ sender: Any) {
+        currentDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate) ?? Date()
+        updateDateDisplay()
+    }
+    
+    func updateDateDisplay() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        
+        navigationItem.title = formatter.string(from: currentDate)
+    }
+    
+    
     func addData(){
 
-        divisions.append(DivisionFactory.createDivision(name: "14", of: 10))
-        print(divisions[0].name, divisions[0].students[0].firstName)
-        divisions.append(DivisionFactory.createDivision(name: "124", of: 10))
-        print(divisions[1].name, divisions[1].students[0].firstName)
-        for i in (0...(divisions.count-1)) {
-            print(divisions[i].name, divisions[i].size)
-        }
+        
+        divisions.append(DivisionFactory.createDivision(name: "vEX-1", of: 12))
+        divisions.append(DivisionFactory.createDivision(name: "vCZ-1", of: 10))
+  
+       
         
     }
     

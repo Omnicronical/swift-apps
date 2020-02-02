@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		642041B223E740FF00DCC4C5 /* DivisionAbsenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642041B123E740FF00DCC4C5 /* DivisionAbsenceViewController.swift */; };
 		64E10E2023E35B3C00793ABC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E10E1F23E35B3C00793ABC /* AppDelegate.swift */; };
 		64E10E2223E35B3C00793ABC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E10E2123E35B3C00793ABC /* SceneDelegate.swift */; };
 		64E10E2423E35B3C00793ABC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E10E2323E35B3C00793ABC /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		642041B123E740FF00DCC4C5 /* DivisionAbsenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionAbsenceViewController.swift; sourceTree = "<group>"; };
 		64E10E1C23E35B3C00793ABC /* AbsenceRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbsenceRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E10E1F23E35B3C00793ABC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64E10E2123E35B3C00793ABC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				64E10E1F23E35B3C00793ABC /* AppDelegate.swift */,
 				64E10E2123E35B3C00793ABC /* SceneDelegate.swift */,
 				64E10E2323E35B3C00793ABC /* ViewController.swift */,
+				642041B123E740FF00DCC4C5 /* DivisionAbsenceViewController.swift */,
 				64E10E2523E35B3C00793ABC /* Main.storyboard */,
 				64E10E2823E35B3D00793ABC /* Assets.xcassets */,
 				64E10E2A23E35B3D00793ABC /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 				64E10E2023E35B3C00793ABC /* AppDelegate.swift in Sources */,
 				64E10E5223E36B4A00793ABC /* Division.swift in Sources */,
 				64E10E2223E35B3C00793ABC /* SceneDelegate.swift in Sources */,
+				642041B223E740FF00DCC4C5 /* DivisionAbsenceViewController.swift in Sources */,
 				64E10E5023E36AAA00793ABC /* Student.swift in Sources */,
 				64E10E5423E36C8400793ABC /* DivisionFactory.swift in Sources */,
 			);
