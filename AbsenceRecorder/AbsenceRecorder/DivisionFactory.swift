@@ -14,8 +14,8 @@ class DivisionFactory {
     
     static func createDivision(name: String, of size: Int) -> Division {
         let division = Division(name: name)
-        var vCV1surnameArray = ["Hench","Scrub","Denver","Toronto","Smalls","Gross","Korma","Reisling","Handover","Trent"]
-        var vEX1surnameArray = ["Squanch","Trinolo","Ansl","Gaba Gaba","Huugh","Deasle","Bruot","Keisling","Hemp","Banta","Freiedrick","Frost"]
+        let vCV1surnameArray = ["Hench","Scrub","Denver","Toronto","Smalls","Gross","Korma","Reisling","Handover","Trent"]
+        let vEX1surnameArray = ["Squanch","Trinolo","Ansl","Gaba Gaba","Huugh","Deasle","Bruot","Keisling","Hemp","Banta","Freiedrick","Frost"]
         if division.name == "vEX-1" {
             for i in 0...size-1 {
                 let oneStudent = Student(firstName: "FirstName\(i)", surname: "\(vEX1surnameArray[i])", birthdate: i)

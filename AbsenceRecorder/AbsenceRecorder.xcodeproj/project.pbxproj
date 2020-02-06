@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		642041B223E740FF00DCC4C5 /* DivisionAbsenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642041B123E740FF00DCC4C5 /* DivisionAbsenceViewController.swift */; };
+		642041B423E7573100DCC4C5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642041B323E7573100DCC4C5 /* SearchViewController.swift */; };
+		647625E623ECC59C008A78E2 /* StudentCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647625E523ECC59C008A78E2 /* StudentCellTableViewCell.swift */; };
+		647625E823ECC7A3008A78E2 /* Absence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647625E723ECC7A3008A78E2 /* Absence.swift */; };
 		64E10E2023E35B3C00793ABC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E10E1F23E35B3C00793ABC /* AppDelegate.swift */; };
 		64E10E2223E35B3C00793ABC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E10E2123E35B3C00793ABC /* SceneDelegate.swift */; };
 		64E10E2423E35B3C00793ABC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E10E2323E35B3C00793ABC /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		642041B123E740FF00DCC4C5 /* DivisionAbsenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionAbsenceViewController.swift; sourceTree = "<group>"; };
+		642041B323E7573100DCC4C5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		647625E523ECC59C008A78E2 /* StudentCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCellTableViewCell.swift; sourceTree = "<group>"; };
+		647625E723ECC7A3008A78E2 /* Absence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Absence.swift; sourceTree = "<group>"; };
 		64E10E1C23E35B3C00793ABC /* AbsenceRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbsenceRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E10E1F23E35B3C00793ABC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64E10E2123E35B3C00793ABC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +116,9 @@
 				64E10E1F23E35B3C00793ABC /* AppDelegate.swift */,
 				64E10E2123E35B3C00793ABC /* SceneDelegate.swift */,
 				64E10E2323E35B3C00793ABC /* ViewController.swift */,
+				642041B323E7573100DCC4C5 /* SearchViewController.swift */,
 				642041B123E740FF00DCC4C5 /* DivisionAbsenceViewController.swift */,
+				647625E523ECC59C008A78E2 /* StudentCellTableViewCell.swift */,
 				64E10E2523E35B3C00793ABC /* Main.storyboard */,
 				64E10E2823E35B3D00793ABC /* Assets.xcassets */,
 				64E10E2A23E35B3D00793ABC /* LaunchScreen.storyboard */,
@@ -118,6 +126,7 @@
 				64E10E4F23E36AAA00793ABC /* Student.swift */,
 				64E10E5123E36B4A00793ABC /* Division.swift */,
 				64E10E5323E36C8400793ABC /* DivisionFactory.swift */,
+				647625E723ECC7A3008A78E2 /* Absence.swift */,
 			);
 			path = AbsenceRecorder;
 			sourceTree = "<group>";
@@ -273,9 +282,12 @@
 			files = (
 				64E10E2423E35B3C00793ABC /* ViewController.swift in Sources */,
 				64E10E2023E35B3C00793ABC /* AppDelegate.swift in Sources */,
+				642041B423E7573100DCC4C5 /* SearchViewController.swift in Sources */,
+				647625E623ECC59C008A78E2 /* StudentCellTableViewCell.swift in Sources */,
 				64E10E5223E36B4A00793ABC /* Division.swift in Sources */,
 				64E10E2223E35B3C00793ABC /* SceneDelegate.swift in Sources */,
 				642041B223E740FF00DCC4C5 /* DivisionAbsenceViewController.swift in Sources */,
+				647625E823ECC7A3008A78E2 /* Absence.swift in Sources */,
 				64E10E5023E36AAA00793ABC /* Student.swift in Sources */,
 				64E10E5423E36C8400793ABC /* DivisionFactory.swift in Sources */,
 			);

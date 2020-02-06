@@ -11,8 +11,31 @@ import Foundation
 class Division {
     let name: String
     var students: [Student] = []
+    var absences: [Absence] = []
+    
     
     init(name: String){
         self.name = name
+    }
+    
+    func hasAbsence(for date: Date) -> Bool {
+        for absence in absences {
+            if absence.takenOn == date {
+                return true
+            }
+        }
+        return false
+
+    }
+    
+    func getAbsence(for date : Date) -> Absence? {
+        
+        for absence in absences {
+            if absence.takenOn == date {
+                return absence
+            }
+        }
+        return nil
+        
     }
 }
