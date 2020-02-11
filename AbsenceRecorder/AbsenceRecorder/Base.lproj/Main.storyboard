@@ -10,7 +10,7 @@
         <!--Divisions-->
         <scene sceneID="4pR-aR-kU7">
             <objects>
-                <tableViewController id="G4W-P7-ciz" customClass="ViewController" customModule="AbsenceRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="G4W-P7-ciz" customClass="HomeViewController" customModule="AbsenceRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BBr-x8-ToL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
