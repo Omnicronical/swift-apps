@@ -12,8 +12,7 @@ class CommentGeneratorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var back = init(title: "BACK", style: UIBarButtonItem.Style, target: Any?, action: Selector?)
-        navigationItem.backBarButtonItem = back
+        
         // Do any additional setup after loading the view.
     }
     
