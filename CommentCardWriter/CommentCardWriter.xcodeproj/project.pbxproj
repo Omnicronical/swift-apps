@@ -19,6 +19,7 @@
 		64471CB123F2D080004B4AAB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64471CB023F2D080004B4AAB /* Comment.swift */; };
 		64471CB323F2D0A2004B4AAB /* StudentEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64471CB223F2D0A2004B4AAB /* StudentEvaluation.swift */; };
 		64471CB523F2DF04004B4AAB /* CommentGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64471CB423F2DF04004B4AAB /* CommentGeneratorViewController.swift */; };
+		64A897DA23F34D7600F0FBDF /* CommentViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A897D923F34D7600F0FBDF /* CommentViewerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		64471CB023F2D080004B4AAB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		64471CB223F2D0A2004B4AAB /* StudentEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEvaluation.swift; sourceTree = "<group>"; };
 		64471CB423F2DF04004B4AAB /* CommentGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentGeneratorViewController.swift; sourceTree = "<group>"; };
+		64A897D923F34D7600F0FBDF /* CommentViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				64471C7F23F2D00E004B4AAB /* SceneDelegate.swift */,
 				64471C8123F2D00E004B4AAB /* ViewController.swift */,
 				64471CB423F2DF04004B4AAB /* CommentGeneratorViewController.swift */,
+				64A897D923F34D7600F0FBDF /* CommentViewerViewController.swift */,
 				64471C8323F2D00E004B4AAB /* Main.storyboard */,
 				64471C8623F2D00F004B4AAB /* Assets.xcassets */,
 				64471C8823F2D00F004B4AAB /* LaunchScreen.storyboard */,
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A897DA23F34D7600F0FBDF /* CommentViewerViewController.swift in Sources */,
 				64471CB123F2D080004B4AAB /* Comment.swift in Sources */,
 				64471C8223F2D00E004B4AAB /* ViewController.swift in Sources */,
 				64471CB523F2DF04004B4AAB /* CommentGeneratorViewController.swift in Sources */,
