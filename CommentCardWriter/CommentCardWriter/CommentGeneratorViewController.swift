@@ -10,10 +10,12 @@ import UIKit
 
 class CommentGeneratorViewController: UIViewController {
     
-    var comment: Comment
+    let commentGenerator = CommentGenerator()
     
-    init?(coder: NSCoder, comment: Comment) {
-        self.comment = comment
+    var subject: String
+    
+    init?(coder: NSCoder, subject: String) {
+        self.subject = subject
         super.init(coder: coder)
     }
     
@@ -21,15 +23,43 @@ class CommentGeneratorViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @IBOutlet var weaknessTextField: UITextField!
+    @IBOutlet var strengthTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "EDITOR"
         setCustomBackImage()
-        print(comment)
-        // Do any additional setup after loading the view.
+        
     }
     
-
+    @IBAction func generateButtonPushed(_ sender: Any) {
+        let weakness = weaknessTextField.text!
+        let strength = strengthTextField.text!
+        if  weakness.count > 0 {
+            if  strength.count > 0 {
+                let input = StudentEvaluation(1, weakness, strength)
+                let comment = commentGenerator.generateComment(input: input, subject: subject)
+                
+                
+                
+                guard let vc = storyboard?.instantiateViewController(identifier: "CommentViewerViewController", creator: { coder in
+                    return CommentViewerViewController(coder: coder, comment: comment
+                )})else { fatalError("OOF") }
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        } else {
+            let alert = UIAlertController(title: "Generate Failed", message: "You must input your WEAKNESS and STRENGTH", preferredStyle: .alert)
+                       
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                       
+            self.present(alert, animated: true)
+        }
+    }
+    
+        
+    
+    
     /*
     // MARK: - Navigation
 

@@ -13,24 +13,19 @@ class ViewController: UITableViewController {
     let commentGenerator = CommentGenerator()
     let subjects = ["Maths","Computer Science", "English", "Design"]
     var subject: String = ""
-    var comment: Comment? = nil
+    
+    
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dummy()
         setCustomBackImage()
         navigationItem.title = "COMMENT CARD GENERATOR"
         // Do any additional setup after loading the view.
     }
     
-    func dummy() {
-    subject = subjects[0]
-    let input = StudentEvaluation(1, "no", "yes")
-    comment = commentGenerator.generateComment(input: input, subject: subject)
-        print(comment!.content)
-    }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subjects.count
@@ -46,7 +41,8 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         subject = subjects[indexPath.row]
         guard let vc = storyboard?.instantiateViewController(identifier: "CommentGeneratorViewController", creator: { coder in
-            return CommentGeneratorViewController(coder: coder, comment: self.comment!
+            return CommentGeneratorViewController(coder: coder, subject: self.subject
+                
         )})else { fatalError("OOF") }
         navigationController?.pushViewController(vc, animated: true)
         
