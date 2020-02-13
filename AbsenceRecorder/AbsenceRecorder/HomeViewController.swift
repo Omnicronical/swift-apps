@@ -39,17 +39,14 @@ class HomeViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Division", for: indexPath) 
         
-        cell.textLabel?.text = divisions[indexPath.row].name
-        if cellAccessoryType == true {
-            cell.accessoryType = .checkmark
-        }
+        let selectedDivision = divisions[indexPath.row]
+        cell.textLabel?.text = selectedDivision.name
+        cell.accessoryType = selectedDivision.getAbsence(for: currentDate) == nil ? .none : .checkmark
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-    
         
         let selectedDivision = divisions[indexPath.row]
         
@@ -77,7 +74,18 @@ class HomeViewController: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let allPresent = UIContextualAction(style: .normal, title: "All Present") { action, view, completionHandler in
+            let division = self.divisions[indexPath.row]
+            let absence = Absence(date: self.currentDate, present: division.students)
+            division.absences.append(absence)
+            tableView.reloadData()
+            completionHandler(true)
+        }
+        
+        allPresent.backgroundColor = UIColor.gray
+        return UISwipeActionsConfiguration(actions: [allPresent])
+    }
     
     @IBAction func LastDay(_ sender: Any) {
         currentDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate) ?? Date()

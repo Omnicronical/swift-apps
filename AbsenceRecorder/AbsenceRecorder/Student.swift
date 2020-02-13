@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Student {
+class Student:Equatable {
+    
     let firstName: String
     let surname: String
     let birthdate: Int
@@ -18,4 +19,9 @@ class Student {
         self.surname = surname
         self.birthdate = birthdate
     }
+    
+    static func == (lhs: Student, rhs: Student) -> Bool {
+        return lhs.firstName == rhs.firstName && lhs.surname == rhs.surname && lhs.birthdate == rhs.birthdate
+    }
+    
 }
