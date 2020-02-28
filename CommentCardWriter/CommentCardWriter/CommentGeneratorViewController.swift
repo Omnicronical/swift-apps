@@ -25,6 +25,8 @@ class CommentGeneratorViewController: UIViewController {
     
     @IBOutlet var weaknessTextField: UITextField!
     @IBOutlet var strengthTextField: UITextField!
+    @IBOutlet var enjoymentLevelSelector: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +35,15 @@ class CommentGeneratorViewController: UIViewController {
         
     }
     
+    
     @IBAction func generateButtonPushed(_ sender: Any) {
         let weakness = weaknessTextField.text!
         let strength = strengthTextField.text!
+        let whichSegment = enjoymentLevelSelector.selectedSegmentIndex
+        let enjoyment = enjoymentLevelSelector.titleForSegment(at: whichSegment)
         if  weakness.count > 0 {
             if  strength.count > 0 {
-                let input = StudentEvaluation(1, weakness, strength)
+                let input = StudentEvaluation(enjoyment!, weakness, strength)
                 let comment = commentGenerator.generateComment(input: input, subject: subject)
                 
                 
