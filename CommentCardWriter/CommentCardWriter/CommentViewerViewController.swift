@@ -13,6 +13,7 @@ class CommentViewerViewController: UIViewController {
     @IBOutlet var commentDisplay: UILabel!
     
     var comment: Comment
+    var card = CommentCard()
     
     init?(coder: NSCoder, comment: Comment) {
         self.comment = comment
@@ -36,7 +37,11 @@ class CommentViewerViewController: UIViewController {
         pasteBoard.string = comment.content
     }
     
-  
+    @IBAction func saveButtonPushed(_ sender: Any) {
+        card.addComment(comment: comment.content)
+        print(card.card)
+    }
+    
     
     /*
     // MARK: - Navigation

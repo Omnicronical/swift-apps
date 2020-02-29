@@ -19,6 +19,7 @@
 		64471CB123F2D080004B4AAB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64471CB023F2D080004B4AAB /* Comment.swift */; };
 		64471CB323F2D0A2004B4AAB /* StudentEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64471CB223F2D0A2004B4AAB /* StudentEvaluation.swift */; };
 		64471CB523F2DF04004B4AAB /* CommentGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64471CB423F2DF04004B4AAB /* CommentGeneratorViewController.swift */; };
+		648128D2240AD00F00CFC1D4 /* CommentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648128D1240AD00F00CFC1D4 /* CommentCard.swift */; };
 		64A897DA23F34D7600F0FBDF /* CommentViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A897D923F34D7600F0FBDF /* CommentViewerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		64471CB023F2D080004B4AAB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		64471CB223F2D0A2004B4AAB /* StudentEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEvaluation.swift; sourceTree = "<group>"; };
 		64471CB423F2DF04004B4AAB /* CommentGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentGeneratorViewController.swift; sourceTree = "<group>"; };
+		648128D1240AD00F00CFC1D4 /* CommentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCard.swift; sourceTree = "<group>"; };
 		64A897D923F34D7600F0FBDF /* CommentViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 				64471C8823F2D00F004B4AAB /* LaunchScreen.storyboard */,
 				64471C8B23F2D00F004B4AAB /* Info.plist */,
 				64471CAE23F2D057004B4AAB /* CommentGenerator.swift */,
+				648128D1240AD00F00CFC1D4 /* CommentCard.swift */,
 				64471CB023F2D080004B4AAB /* Comment.swift */,
 				64471CB223F2D0A2004B4AAB /* StudentEvaluation.swift */,
 			);
@@ -278,6 +281,7 @@
 				64471CB123F2D080004B4AAB /* Comment.swift in Sources */,
 				64471C8223F2D00E004B4AAB /* ViewController.swift in Sources */,
 				64471CB523F2DF04004B4AAB /* CommentGeneratorViewController.swift in Sources */,
+				648128D2240AD00F00CFC1D4 /* CommentCard.swift in Sources */,
 				64471C7E23F2D00E004B4AAB /* AppDelegate.swift in Sources */,
 				64471C8023F2D00E004B4AAB /* SceneDelegate.swift in Sources */,
 				64471CAF23F2D057004B4AAB /* CommentGenerator.swift in Sources */,

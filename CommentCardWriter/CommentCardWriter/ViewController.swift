@@ -22,6 +22,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         setCustomBackImage()
         navigationItem.title = "COMMENT CARD GENERATOR"
+        
         // Do any additional setup after loading the view.
     }
     
