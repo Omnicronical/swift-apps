@@ -14,6 +14,7 @@ class BeginViewController: UIViewController {
     @IBOutlet var subjectTwo: UITextField!
     @IBOutlet var subjectThree: UITextField!
     @IBOutlet var subjectFour: UITextField!
+    var subject : [String] = []
     
     
     override func viewDidLoad() {
@@ -23,6 +24,24 @@ class BeginViewController: UIViewController {
     }
     
     @IBAction func beginButtonPressed(_ sender: Any) {
+        if subjectOne.text != nil {
+            subject.append(subjectOne.text!)
+        }
+        if subjectTwo.text != nil {
+            subject.append(subjectTwo.text!)
+        }
+        if subjectThree.text != nil {
+            subject.append(subjectThree.text!)
+        }
+        if subjectFour.text != nil {
+            subject.append(subjectFour.text!)
+        }
+        
+        guard let vc = storyboard?.instantiateViewController(identifier: "ViewController", creator: { coder in
+        return ViewController(coder: coder, subject: self.subject)
+        )})else { fatalError("OOF") }
+            navigationController?.pushViewController(vc, animated: true)
+
         
     }
     

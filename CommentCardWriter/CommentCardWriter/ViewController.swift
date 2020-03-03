@@ -14,7 +14,14 @@ class ViewController: UITableViewController {
     let subjects = ["Maths","Computer Science", "English", "Design"]
     var subject: String = ""
     
+    init?(coder: NSCoder, subject: [String]) {
+        self.subject = subject
+        super.init(coder: coder)
+    }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
 
