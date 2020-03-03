@@ -13,7 +13,7 @@ class CommentGenerator {
     
     
     func generateComment(input: StudentEvaluation, subject: String) -> Comment {
-        let content = "I am enjoying \(subject) \(input.enjoymentPhrase). I think my weaknesses are \(input.weakness) and my strengths are \(input.strength)"
+        let content = "I am enjoying \(subject) \(input.enjoymentPhrase). I think my weaknesses are \(input.weakness) and my strengths are \(input.strength). I feel like I'm doing \(input.attainmentPhrase)"
         let characterCount = content.count
         let myComment = Comment(subject, characterCount, content)
         return myComment
