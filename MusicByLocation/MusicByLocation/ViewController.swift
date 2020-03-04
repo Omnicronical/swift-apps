@@ -34,7 +34,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 if error != nil {
                     self.musicRecommendations.text = "Could not perform lookup of location for latitude: \(firstLocation.coordinate.latitude.description)"
                 } else {
-                    let country = placemarks?[0].country
+                    var country = placemarks?[0].country
                     let locality = placemarks?[0].locality
                     let timeZone = placemarks?[0].timeZone
                     self.musicRecommendations.text = """
@@ -42,6 +42,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     And in the city of \(locality!)
                     Time Zone : \(timeZone!)
                     """
+                    let countryPart = country?.split(separator:  " ")[0]
+                    self.getArtists(country: String(countryPart!))
                 }
                 
             })
@@ -51,6 +53,48 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         musicRecommendations.text = "Could not access user's location. Error: \(error.localizedDescription)"
+    }
+    
+    func getArtists(country: String) -> String {
+        guard let url = URL(string: "https://itunes.apple.com/search?term=\(country)&entity=musicArtist")
+            else {
+                print("INVALID URL")
+                return "INVALID URL"
+        }
+        
+        let request = URLRequest(url: url)
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                print(String(decoding: data, as: UTF8.self))
+                if let response = self.parseJson(json: data) {
+                    let names = response.results.map {
+                        return $0.artistName
+                    }
+                    DispatchQueue.main.async {
+                        self.musicRecommendations.text = names.joined(separator: ", ")
+                    }
+                    
+                }
+            }
+        }.resume()
+        
+        return ""
+    }
+    
+    func parseJson(json: Data) -> ArtistResponse? {
+        let decoder = JSONDecoder()
+        
+        if let artistResponse = try?decoder.decode(ArtistResponse.self, from: json){
+            return artistResponse
+        } else {
+            print("FAILED TO DECODE TO ARTIST RESPONSE")
+            return nil
+            
+        }
+        
+       
+        
     }
     
 }
