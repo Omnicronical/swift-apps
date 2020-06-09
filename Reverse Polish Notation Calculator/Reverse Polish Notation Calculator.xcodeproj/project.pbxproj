@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		649CC3FD248F80FB00BF9FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649CC3FC248F80FB00BF9FDF /* AppDelegate.swift */; };
+		649CC3FF248F80FB00BF9FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649CC3FE248F80FB00BF9FDF /* SceneDelegate.swift */; };
+		649CC401248F80FB00BF9FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649CC400248F80FB00BF9FDF /* ViewController.swift */; };
+		649CC404248F80FB00BF9FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649CC402248F80FB00BF9FDF /* Main.storyboard */; };
+		649CC406248F80FD00BF9FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649CC405248F80FD00BF9FDF /* Assets.xcassets */; };
+		649CC409248F80FD00BF9FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649CC407248F80FD00BF9FDF /* LaunchScreen.storyboard */; };
+		649CC414248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649CC413248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorTests.swift */; };
+		649CC41F248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649CC41E248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		649CC410248F80FD00BF9FDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 649CC3F1248F80FB00BF9FDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 649CC3F8248F80FB00BF9FDF;
+			remoteInfo = "Reverse Polish Notation Calculator";
+		};
+		649CC41B248F80FD00BF9FDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 649CC3F1248F80FB00BF9FDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 649CC3F8248F80FB00BF9FDF;
+			remoteInfo = "Reverse Polish Notation Calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		649CC3F9248F80FB00BF9FDF /* Reverse Polish Notation Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse Polish Notation Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		649CC3FC248F80FB00BF9FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		649CC3FE248F80FB00BF9FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		649CC400248F80FB00BF9FDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		649CC403248F80FB00BF9FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		649CC405248F80FD00BF9FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		649CC408248F80FD00BF9FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		649CC40A248F80FD00BF9FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		649CC40F248F80FD00BF9FDF /* Reverse Polish Notation CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse Polish Notation CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		649CC413248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_Polish_Notation_CalculatorTests.swift; sourceTree = "<group>"; };
+		649CC415248F80FD00BF9FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		649CC41A248F80FD00BF9FDF /* Reverse Polish Notation CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse Polish Notation CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		649CC41E248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_Polish_Notation_CalculatorUITests.swift; sourceTree = "<group>"; };
+		649CC420248F80FD00BF9FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		649CC3F6248F80FB00BF9FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649CC40C248F80FD00BF9FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649CC417248F80FD00BF9FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		649CC3F0248F80FB00BF9FDF = {
+			isa = PBXGroup;
+			children = (
+				649CC3FB248F80FB00BF9FDF /* Reverse Polish Notation Calculator */,
+				649CC412248F80FD00BF9FDF /* Reverse Polish Notation CalculatorTests */,
+				649CC41D248F80FD00BF9FDF /* Reverse Polish Notation CalculatorUITests */,
+				649CC3FA248F80FB00BF9FDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		649CC3FA248F80FB00BF9FDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				649CC3F9248F80FB00BF9FDF /* Reverse Polish Notation Calculator.app */,
+				649CC40F248F80FD00BF9FDF /* Reverse Polish Notation CalculatorTests.xctest */,
+				649CC41A248F80FD00BF9FDF /* Reverse Polish Notation CalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		649CC3FB248F80FB00BF9FDF /* Reverse Polish Notation Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				649CC3FC248F80FB00BF9FDF /* AppDelegate.swift */,
+				649CC3FE248F80FB00BF9FDF /* SceneDelegate.swift */,
+				649CC400248F80FB00BF9FDF /* ViewController.swift */,
+				649CC402248F80FB00BF9FDF /* Main.storyboard */,
+				649CC405248F80FD00BF9FDF /* Assets.xcassets */,
+				649CC407248F80FD00BF9FDF /* LaunchScreen.storyboard */,
+				649CC40A248F80FD00BF9FDF /* Info.plist */,
+			);
+			path = "Reverse Polish Notation Calculator";
+			sourceTree = "<group>";
+		};
+		649CC412248F80FD00BF9FDF /* Reverse Polish Notation CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				649CC413248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorTests.swift */,
+				649CC415248F80FD00BF9FDF /* Info.plist */,
+			);
+			path = "Reverse Polish Notation CalculatorTests";
+			sourceTree = "<group>";
+		};
+		649CC41D248F80FD00BF9FDF /* Reverse Polish Notation CalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				649CC41E248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorUITests.swift */,
+				649CC420248F80FD00BF9FDF /* Info.plist */,
+			);
+			path = "Reverse Polish Notation CalculatorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		649CC3F8248F80FB00BF9FDF /* Reverse Polish Notation Calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 649CC423248F80FD00BF9FDF /* Build configuration list for PBXNativeTarget "Reverse Polish Notation Calculator" */;
+			buildPhases = (
+				649CC3F5248F80FB00BF9FDF /* Sources */,
+				649CC3F6248F80FB00BF9FDF /* Frameworks */,
+				649CC3F7248F80FB00BF9FDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reverse Polish Notation Calculator";
+			productName = "Reverse Polish Notation Calculator";
+			productReference = 649CC3F9248F80FB00BF9FDF /* Reverse Polish Notation Calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		649CC40E248F80FD00BF9FDF /* Reverse Polish Notation CalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 649CC426248F80FD00BF9FDF /* Build configuration list for PBXNativeTarget "Reverse Polish Notation CalculatorTests" */;
+			buildPhases = (
+				649CC40B248F80FD00BF9FDF /* Sources */,
+				649CC40C248F80FD00BF9FDF /* Frameworks */,
+				649CC40D248F80FD00BF9FDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				649CC411248F80FD00BF9FDF /* PBXTargetDependency */,
+			);
+			name = "Reverse Polish Notation CalculatorTests";
+			productName = "Reverse Polish Notation CalculatorTests";
+			productReference = 649CC40F248F80FD00BF9FDF /* Reverse Polish Notation CalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		649CC419248F80FD00BF9FDF /* Reverse Polish Notation CalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 649CC429248F80FD00BF9FDF /* Build configuration list for PBXNativeTarget "Reverse Polish Notation CalculatorUITests" */;
+			buildPhases = (
+				649CC416248F80FD00BF9FDF /* Sources */,
+				649CC417248F80FD00BF9FDF /* Frameworks */,
+				649CC418248F80FD00BF9FDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				649CC41C248F80FD00BF9FDF /* PBXTargetDependency */,
+			);
+			name = "Reverse Polish Notation CalculatorUITests";
+			productName = "Reverse Polish Notation CalculatorUITests";
+			productReference = 649CC41A248F80FD00BF9FDF /* Reverse Polish Notation CalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		649CC3F1248F80FB00BF9FDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Hassall, Oscar (HWTA)";
+				TargetAttributes = {
+					649CC3F8248F80FB00BF9FDF = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					649CC40E248F80FD00BF9FDF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 649CC3F8248F80FB00BF9FDF;
+					};
+					649CC419248F80FD00BF9FDF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 649CC3F8248F80FB00BF9FDF;
+					};
+				};
+			};
+			buildConfigurationList = 649CC3F4248F80FB00BF9FDF /* Build configuration list for PBXProject "Reverse Polish Notation Calculator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 649CC3F0248F80FB00BF9FDF;
+			productRefGroup = 649CC3FA248F80FB00BF9FDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				649CC3F8248F80FB00BF9FDF /* Reverse Polish Notation Calculator */,
+				649CC40E248F80FD00BF9FDF /* Reverse Polish Notation CalculatorTests */,
+				649CC419248F80FD00BF9FDF /* Reverse Polish Notation CalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		649CC3F7248F80FB00BF9FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				649CC409248F80FD00BF9FDF /* LaunchScreen.storyboard in Resources */,
+				649CC406248F80FD00BF9FDF /* Assets.xcassets in Resources */,
+				649CC404248F80FB00BF9FDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649CC40D248F80FD00BF9FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649CC418248F80FD00BF9FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		649CC3F5248F80FB00BF9FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				649CC401248F80FB00BF9FDF /* ViewController.swift in Sources */,
+				649CC3FD248F80FB00BF9FDF /* AppDelegate.swift in Sources */,
+				649CC3FF248F80FB00BF9FDF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649CC40B248F80FD00BF9FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				649CC414248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649CC416248F80FD00BF9FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				649CC41F248F80FD00BF9FDF /* Reverse_Polish_Notation_CalculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		649CC411248F80FD00BF9FDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 649CC3F8248F80FB00BF9FDF /* Reverse Polish Notation Calculator */;
+			targetProxy = 649CC410248F80FD00BF9FDF /* PBXContainerItemProxy */;
+		};
+		649CC41C248F80FD00BF9FDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 649CC3F8248F80FB00BF9FDF /* Reverse Polish Notation Calculator */;
+			targetProxy = 649CC41B248F80FD00BF9FDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		649CC402248F80FB00BF9FDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				649CC403248F80FB00BF9FDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		649CC407248F80FD00BF9FDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				649CC408248F80FD00BF9FDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		649CC421248F80FD00BF9FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		649CC422248F80FD00BF9FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		649CC424248F80FD00BF9FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Reverse Polish Notation Calculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Omnicronical.Reverse-Polish-Notation-Calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		649CC425248F80FD00BF9FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Reverse Polish Notation Calculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Omnicronical.Reverse-Polish-Notation-Calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		649CC427248F80FD00BF9FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Reverse Polish Notation CalculatorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Omnicronical.Reverse-Polish-Notation-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reverse Polish Notation Calculator.app/Reverse Polish Notation Calculator";
+			};
+			name = Debug;
+		};
+		649CC428248F80FD00BF9FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Reverse Polish Notation CalculatorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Omnicronical.Reverse-Polish-Notation-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reverse Polish Notation Calculator.app/Reverse Polish Notation Calculator";
+			};
+			name = Release;
+		};
+		649CC42A248F80FD00BF9FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Reverse Polish Notation CalculatorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Omnicronical.Reverse-Polish-Notation-CalculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Reverse Polish Notation Calculator";
+			};
+			name = Debug;
+		};
+		649CC42B248F80FD00BF9FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Reverse Polish Notation CalculatorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Omnicronical.Reverse-Polish-Notation-CalculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Reverse Polish Notation Calculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		649CC3F4248F80FB00BF9FDF /* Build configuration list for PBXProject "Reverse Polish Notation Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				649CC421248F80FD00BF9FDF /* Debug */,
+				649CC422248F80FD00BF9FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		649CC423248F80FD00BF9FDF /* Build configuration list for PBXNativeTarget "Reverse Polish Notation Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				649CC424248F80FD00BF9FDF /* Debug */,
+				649CC425248F80FD00BF9FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		649CC426248F80FD00BF9FDF /* Build configuration list for PBXNativeTarget "Reverse Polish Notation CalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				649CC427248F80FD00BF9FDF /* Debug */,
+				649CC428248F80FD00BF9FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		649CC429248F80FD00BF9FDF /* Build configuration list for PBXNativeTarget "Reverse Polish Notation CalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				649CC42A248F80FD00BF9FDF /* Debug */,
+				649CC42B248F80FD00BF9FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 649CC3F1248F80FB00BF9FDF /* Project object */;
+}

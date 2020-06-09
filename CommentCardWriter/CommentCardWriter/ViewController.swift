@@ -11,17 +11,18 @@ import UIKit
 class ViewController: UITableViewController {
     
     let commentGenerator = CommentGenerator()
-    let subjects = ["Maths","Computer Science", "English", "Design"]
-    var subject: String = ""
+    var subjects: [String] = []
     
     init?(coder: NSCoder, subject: [String]) {
-        self.subject = subject
+        self.subjects = subject
         super.init(coder: coder)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     
     
 
@@ -47,9 +48,9 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        subject = subjects[indexPath.row]
+        let subject = subjects[indexPath.row]
         guard let vc = storyboard?.instantiateViewController(identifier: "CommentGeneratorViewController", creator: { coder in
-            return CommentGeneratorViewController(coder: coder, subject: self.subject
+            return CommentGeneratorViewController(coder: coder, subject: subject
                 
         )})else { fatalError("OOF") }
         navigationController?.pushViewController(vc, animated: true)

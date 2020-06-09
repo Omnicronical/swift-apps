@@ -15,11 +15,13 @@ class BeginViewController: UIViewController {
     @IBOutlet var subjectThree: UITextField!
     @IBOutlet var subjectFour: UITextField!
     var subject : [String] = []
+    var coder = NSCoder()
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -37,8 +39,9 @@ class BeginViewController: UIViewController {
             subject.append(subjectFour.text!)
         }
         
-        guard let vc = storyboard?.instantiateViewController(identifier: "ViewController", creator: { coder in
-        return ViewController(coder: coder, subject: self.subject)
+        guard let vc = storyboard?.instantiateViewController(identifier: "NavigationController", creator: { coder in
+            return ViewController(coder: self.coder, subject: self.subject
+            
         )})else { fatalError("OOF") }
             navigationController?.pushViewController(vc, animated: true)
 
