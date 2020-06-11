@@ -24,4 +24,12 @@ class Operand {
         array = ["+"]
     }
     
+    func getArray() -> String {
+        return (array.joined())
+    }
+    
+    func getRawArray() -> [String] {
+        return (array)
+    }
+    
 }
