@@ -8,6 +8,8 @@
 
 import XCTest
 
+@testable import Reverse_Polish_Notation_Calculator
+
 class Reverse_Polish_Notation_CalculatorUITests: XCTestCase {
 
     override func setUp() {
@@ -25,8 +27,16 @@ class Reverse_Polish_Notation_CalculatorUITests: XCTestCase {
 
     func testExample() {
         // UI tests must launch the application that they test.
+        
         let app = XCUIApplication()
         app.launch()
+        let VC = ViewController()
+        
+        app.buttons["9"].tap()
+        var actual = VC.display.text
+        var expected = "9"
+        
+        XCTAssertEqual(actual, expected)
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
