@@ -25,12 +25,14 @@ class Reverse_Polish_Notation_CalculatorUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testWhetherANumberButtonPrintsThatSameNumberToTheDisplay() {
         // UI tests must launch the application that they test.
         
         let app = XCUIApplication()
         app.launch()
         let VC = ViewController()
+        
+        //I think there is a bug in Xcode because @testable import Reverse_Polish_Notation_Calculator does not work
         
         app.buttons["9"].tap()
         var actual = VC.display.text
